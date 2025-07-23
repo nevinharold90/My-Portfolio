@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-.custom-bg-color {
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* .custom-bg-color {
   background-color: #865DFF;
 }
 
@@ -10,4 +14,14 @@
 
 .custom-text-color-hover {
   color: #FFA3FD;
+} */
+
+
+/* Hide scrollbar for all browsers */
+.scroll-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.scroll-hide {
+  -ms-overflow-style: none;  /* IE 10+ */
+  scrollbar-width: none;     /* Firefox */
 }
