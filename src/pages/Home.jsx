@@ -19,7 +19,7 @@ const Home = () => {
         <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center
                    px-6 bg-white/80 backdrop-blur border-b border-gray-300">
             <div className="flex gap-5 items-center">
-                {["Home", "About", "Capstone Project", "Contact"].map((label) => (
+                {["Home", "About", "Education", "Capstone Project", "Contact"].map((label) => (
                     <span
                         key={label}
                         className="relative group text-gray-500 hover:text-black"
@@ -49,24 +49,23 @@ const Home = () => {
         {/* This is Navbar */}
 
         {/* This is Body */}
-        <div className="pt-16 h-screen overflow-y-scroll snap-y snap-mandatory scroll-hide px-5">            
+        <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-hide px-5">            
             {/* Left Upper Body*/}
             <section 
                 id="sec1" 
                 className="h-screen snap-start flex justify-center text-white"
             >                
                 <div className="flex flex-col p-2 border-r-1  border-gray-400 w-1/2 ">
+                    {/* Home */}
                     <div className="flex flex-col">
                         <h1 className='flex gap-1 text-5xl text-left mt-20 font-bold text-black'>
-                            I'm a Fullstack Web Developer
+                            I'm a Front-end | Fullstack Web Developer
                         </h1>
-                        <h3 className='text-xl mt-10 text-gray-600'>
-                            Hi, I’m Nevin Harold D. Cabarrubias. I’m a full-stack web developer who enjoys building clean and responsive websites and mobile apps. I’ve worked with tools like React, Laravel, and React Native, and have helped create projects like Rentago and an inventory system for managing sales and deliveries. 
-                            I’m comfortable working on both the front-end and back-end, and I like turning complex ideas into simple and user-friendly interfaces. I also have experience with APIs, mobile apps, and UI design using Figma.
-                            More than just coding, I value working well with others, clear communication, and doing everything with purpose. My goal is to build useful and meaningful software — all while honoring God in the work I do.
-                        </h3>
+                        <p className='text-xl mt-20 text-gray-600'>
+                        Hi, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
+                        </p>
                     </div>
-                    <div className="mt-15 w-full gap-x-15 flex align-center justify-center">
+                    <div className="mt-20 w-full gap-x-15 flex align-center justify-center">
                         <div className="justify-center flex items-center">
                             <h1 className='h-[0.5px] w-[200px] bg-black'>
                             </h1>
@@ -82,11 +81,11 @@ const Home = () => {
                     <div className="flex-col ">
                         <div className="flex justify-center mt-20">
                             <h1 className='text-2xl text-gray-500 font-bold italic'>
-                                "Let's create something amazing together!"
+                                "Let's create something amazing together 👌"
                             </h1>
                         </div>
                         {/* links */}
-                        <div className="flex  justify-center gap-5 mt-20">
+                        <div className="flex  justify-center gap-5 mt-25">
                             {socialLinks.map((link) => (
                                 <a 
                                     key={link.name}
@@ -118,10 +117,20 @@ const Home = () => {
 
             <section
                 id="sec2"
-                className="h-screen snap-start flex items-center justify-center"
+                className="h-screen snap-start flex justify-center"
             >
-                <div className="flex flex-col p-2 border-gray-400 w-1/2">
-                   Sample
+                <div className="flex mt-20 flex-col p-2 border-gray-400 w-1/2">
+                    <h1 className='flex gap-1 text-5xl text-left font-bold text-black'>
+                        About Me
+                    </h1>
+                    <p className='text-xl mt-10 text-gray-600'>
+                          Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating cum laude, and a fresh graduate. 
+                          <br /><br />
+                          I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native.</i>
+                          I also have experience integrating RESTful APIs into both web and mobile apps, handling everything from data fetching to error handling and UI updates using platform like <i>Insomnia and Postman</i>.
+                          <br /><br />
+                          Beyond code, I value clear communication, collaboration, and doing all things with intention — and yes, I firmly believe debugging is 70% detective work and 30% caffeine. ☕
+                    </p>
                 </div>
                 <div className="flex flex-col p-2 border-gray-400 w-1/2">
 
