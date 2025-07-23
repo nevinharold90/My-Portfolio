@@ -10,6 +10,7 @@ import meImg from "../assets/pictures/me.webp";
 // import { FaGithub } from "react-icons/fa";
 // import { CiInstagram } from "react-icons/ci";
 
+import SkillBar from './Others/SkillBar'; // adjust the path if needed
 import socialLinks from './Others/socialLink';
 
 const Home = () => {
@@ -35,7 +36,9 @@ const Home = () => {
                 ))}
             </div>
             {/* <div className="flex items-center"> */}
-            <div className="w-auto flex items-center mr-5 group cursor-pointer">
+            <a className="w-auto flex items-center mr-5 group cursor-pointer"
+                href="mailto:cabarrubias.nevinharold@gmail.com"
+            >
                 <CiMail 
                     className="w-6 h-6 border-1 rounded duration-500 group-hover:bg-black group-hover:text-white" 
                 />
@@ -44,7 +47,7 @@ const Home = () => {
                         cabarrubias.nevinharold@gmail.com
                     </span>
                 </h1>
-            </div>
+            </a>
         </div>
         {/* This is Navbar */}
 
@@ -55,10 +58,10 @@ const Home = () => {
                 id="sec1" 
                 className="h-screen snap-start flex justify-center text-white"
             >                
-                <div className="flex flex-col p-2 border-r-1  border-gray-400 w-1/2 ">
+                <div className="flex flex-col p-2 border-r-1 border-gray-400 w-1/2 ">
                     {/* Home */}
                     <div className="flex flex-col">
-                        <h1 className='flex gap-1 text-5xl text-left mt-20 font-bold text-black'>
+                        <h1 className='gap-1 text-5xl text-left mt-20 font-bold text-black'>
                             I'm a Front-end | Fullstack Web Developer
                         </h1>
                         <p className='text-xl mt-20 text-gray-600'>
@@ -119,21 +122,35 @@ const Home = () => {
                 id="sec2"
                 className="h-screen snap-start flex justify-center"
             >
-                <div className="flex mt-20 flex-col p-2 border-gray-400 w-1/2">
-                    <h1 className='flex gap-1 text-5xl text-left font-bold text-black'>
-                        About Me
-                    </h1>
-                    <p className='text-xl mt-10 text-gray-600'>
-                          Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating cum laude, and a fresh graduate. 
-                          <br /><br />
-                          I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native.</i>
-                          I also have experience integrating RESTful APIs into both web and mobile apps, handling everything from data fetching to error handling and UI updates using platform like <i>Insomnia and Postman</i>.
-                          <br /><br />
-                          Beyond code, I value clear communication, collaboration, and doing all things with intention — and yes, I firmly believe debugging is 70% detective work and 30% caffeine. ☕
-                    </p>
-                </div>
-                <div className="flex flex-col p-2 border-gray-400 w-1/2">
+                <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
+                    <div className="flex flex-col p-2 mt-20">
+                        <h1 className='gap-1 text-5xl text-left font-bold text-black'>
+                            About Me
+                        </h1>
+                        <p className='text-xl mt-20 text-gray-600'>
+                            Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating with Latin honors, and a fresh graduate. 
+                            <br /><br />
+                            I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native.</i>
+                            I also have experience integrating RESTful APIs into both web and mobile apps, handling everything from data fetching to error handling and UI updates using platform like <i>Insomnia and Postman</i>.
+                            <br /><br />
+                            Beyond code, I value clear communication, collaboration, and doing all things with intention — and yes, I firmly believe debugging is 70% detective work and 30% caffeine. ☕
+                        </p>
+                    </div>
 
+                </div>
+                <div className="flex flex-col p-2 px-20 mt-20 border-gray-400 w-1/2">
+                    <h1 className='flex gap-1 text-5xl text-left font-bold text-black'>
+                        Skill Meter
+                    </h1>
+
+                    <SkillBar name="HTML" percent={50} color="bg-green-500" />
+                    <SkillBar name="CSS" percent={50} color="bg-blue-400" />
+                    <SkillBar name="ReactJS" percent={50} color="bg-red-500" />
+                    <SkillBar name="JavaScript" percent={40} color="bg-yellow-400" />
+                    <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
+                    <SkillBar name="Laravel" percent={45} color="bg-orange-400" />
+                    <SkillBar name="React Native" percent={30} color="bg-pink-400" />
+                    <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={30} color="bg-gray-600" />
                 </div>
             </section>
         </div>
