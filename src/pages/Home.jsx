@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { CiMail } from "react-icons/ci";
 
 // image below
 import meImg from "../assets/pictures/me.webp";
+import meCumLaudeImg from "../assets/pictures/Cumlaude Image.webp";
+import meDiplomaImg from "../assets/pictures/Diploma.webp";
+
 // import gitHubIcon from "../assets/pictures/Github.png";
 // import gmailIcon from "../assets/pictures/gmail.png";
 // import { SiGmail } from "react-icons/si";
@@ -13,7 +16,27 @@ import meImg from "../assets/pictures/me.webp";
 import SkillBar from './Others/SkillBar'; // adjust the path if needed
 import socialLinks from './Others/socialLink';
 
+
+
+
+
 const Home = () => {
+
+    const images = [
+        meCumLaudeImg,
+        meDiplomaImg
+    ]
+    const [currentIndex, setCurrentIndex] = React.useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+        }, 3000); // Change every 2 seconds
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, [images.length]);
+
+
   return (
     <div className='flex flex-col w-full hide-scrollbar'>
         {/* This is Navbar */}
@@ -115,6 +138,7 @@ const Home = () => {
                         src={meImg} 
                         alt='Image not found'
                     />
+
                 </div>
             </section>
 
@@ -127,10 +151,10 @@ const Home = () => {
                         <h1 className='gap-1 text-5xl text-left font-bold text-black'>
                             About Me
                         </h1>
-                        <p className='text-xl mt-20 text-gray-600'>
+                        <p className='text-xl mt-40 text-gray-600'>
                             Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating with Latin honors, and a fresh graduate. 
                             <br /><br />
-                            I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native.</i>
+                            I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native. </i>
                             I also have experience integrating RESTful APIs into both web and mobile apps, handling everything from data fetching to error handling and UI updates using platform like <i>Insomnia and Postman</i>.
                             <br /><br />
                             Beyond code, I value clear communication, collaboration, and doing all things with intention — and yes, I firmly believe debugging is 70% detective work and 30% caffeine. ☕
@@ -138,20 +162,34 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className="flex flex-col p-2 px-20 mt-20 border-gray-400 w-1/2">
-                    <h1 className='flex gap-1 text-5xl text-left font-bold text-black'>
-                        Skill Meter
-                    </h1>
+                    <div className="flex flex-col p-2 px-20 mt-45 border-gray-400 w-1/2 ">
+                        <img 
+                            className='w-[800px] h-[600px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100'
+                            src={images[currentIndex]} 
+                            alt='Image not found'
+                        />
+                    </div>
+                    
+            </section>
 
-                    <SkillBar name="HTML" percent={50} color="bg-green-500" />
-                    <SkillBar name="CSS" percent={50} color="bg-blue-400" />
-                    <SkillBar name="ReactJS" percent={50} color="bg-red-500" />
-                    <SkillBar name="JavaScript" percent={40} color="bg-yellow-400" />
-                    <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
-                    <SkillBar name="Laravel" percent={45} color="bg-orange-400" />
-                    <SkillBar name="React Native" percent={30} color="bg-pink-400" />
-                    <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={30} color="bg-gray-600" />
-                </div>
+            <section
+                id='sec3'
+                className="h-screen snap-start flex justify-center"
+            >
+            <div className="flex flex-col p-2 mt-20">
+                <h1 className='flex gap-1 text-5xl text-left font-bold text-black'>
+                    Skill Meter
+                </h1>
+
+                <SkillBar name="HTML" percent={40} color="bg-green-500" />
+                <SkillBar name="CSS" percent={40} color="bg-blue-400" />
+                <SkillBar name="ReactJS" percent={25} color="bg-red-500" />
+                <SkillBar name="JavaScript" percent={30} color="bg-yellow-400" />
+                <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
+                <SkillBar name="Laravel" percent={40} color="bg-orange-400" />
+                <SkillBar name="React Native" percent={25} color="bg-pink-400" />
+                <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600" />
+            </div>
             </section>
         </div>
     </div>
