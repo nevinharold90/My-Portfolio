@@ -19,6 +19,10 @@ import socialLinks from './Others/socialLink';
 
 const Home = () => {
 
+    const navbarLinks = [
+        "Home", "About", "Skill", "Projects", "Contact"
+    ]
+
     const softSkills = [
         "Problem-solving and debugging", "Strong work ethic and discipline", "Team collaboration and communication",
         "Leadership and organization", "Adaptability", "Project Manager", "Time Management","Critical Thinking"
@@ -42,10 +46,10 @@ const Home = () => {
         {/* This is Navbar */}
         <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center px-6 bg-white/80 backdrop-blur border-b border-gray-300">
             <div className="flex gap-5 items-center">
-                {["Home", "About", "Skill", "Projects", "Contact"].map((label) => (
+                {navbarLinks.map((label) => (
                     <span
                         key={label}
-                        className="relative group text-gray-500 hover:text-black cursor-pointer"
+                        className="relative  group text-gray-500 hover:text-black cursor-pointer"
                         href="#"
                     >
                         <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
@@ -87,7 +91,7 @@ const Home = () => {
                             I'm a Front-end | Fullstack Web Developer
                         </h1>
                         <p className='text-xl mt-20 text-gray-600'>
-                            Hi, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
+                            Welcome, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
                         </p>
                     </div>
                     <div className="mt-20 w-full gap-x-15 flex align-center justify-center">
@@ -95,7 +99,7 @@ const Home = () => {
                             <h1 className='h-[0.5px] w-[200px] bg-black'>
                             </h1>
                         </div>
-                        <h1 className='duration-500 hover:text-black hover:border hover:bg-white bg-black  p-2 border-1 rounded-4xl text-3xl text-left font-bold'>
+                        <h1 className='duration-500 hover:text-black hover:border hover:bg-white bg-black  p-2 border-1 rounded-4xl text-3xl text-left font-bold cursor-default'>
                             Connect with me 
                         </h1>
                         <div className="justify-center flex items-center">
@@ -174,7 +178,7 @@ const Home = () => {
                    <div className="p-1 px-10">
                         <SkillBar name="HTML" percent={40} color="bg-green-500" />
                         <SkillBar name="CSS" percent={40} color="bg-blue-400" />
-                        <SkillBar name="ReactJS" percent={30} color="bg-red-500" />
+                        <SkillBar name="ReactJS" percent={35} color="bg-red-500" />
                         <SkillBar name="JavaScript" percent={30} color="bg-yellow-400" />
                         <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
                         <SkillBar name="Laravel(PHP & MySQL)" percent={40} color="bg-orange-400" />
@@ -232,12 +236,12 @@ const Home = () => {
         <a
             href="./resume/Cabarrubias, Nevin Harold, D  - Resume.pdf"
             download
-            className="fixed bottom-5 right-5 flex items-center gap-3 px-4 py-2 bg-black text-white rounded-full shadow-lg hover:bg-white hover:text-black hover:border transition duration-300 z-50"
+            className="fixed bottom-5 right-5 flex items-center gap-3 px-4 py-2 bg-black text-white rounded-full shadow-lg hover:bg-white hover:text-black transition duration-500 z-50" 
         >
         <IoMdDownload 
             className="w-5 h-5"
         />
-            <span className="text-lg">Resume</span>
+            <span className="text-lg">Resume.pdf</span>
         </a>
     </div>
   )

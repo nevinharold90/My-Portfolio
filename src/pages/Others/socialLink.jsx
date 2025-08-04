@@ -13,17 +13,17 @@ const socialLinks = [
   },
   {
     name: "Gmail",
-    icon: <SiGmail className="w-6 h-6 text-red-600" />,
+    icon: <SiGmail className="w-6 h-6 text-red-600 " />,
     href: "mailto:cabarrubias.nevinharold@gmail.com",
     classname:
-      "border border-gray-200 text-green-500 group hover:bg-gray-100",
+      "border border-gray-200 text-green-500 group hover:bg-gray-50 hover:text-green-400",
   },
   {
     name: "Facebook",
     icon: <FaFacebook className="w-6 h-6" />,
     href: "https://www.facebook.com/nevin.cabarrubias",
     classname:
-      "bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-800 hover:to-blue-600 text-white",
+      "bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-600 hover:to-blue-400 text-white",
   },
   {
     name: "Instagram",
