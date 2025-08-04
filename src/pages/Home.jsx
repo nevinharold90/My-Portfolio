@@ -5,6 +5,7 @@ import { CiMail } from "react-icons/ci";
 import meImg from "../assets/pictures/me.webp";
 import meCumLaudeImg from "../assets/pictures/Cumlaude Image.webp";
 import meDiplomaImg from "../assets/pictures/Diploma.webp";
+import { IoMdDownload } from "react-icons/io";
 
 // import gitHubIcon from "../assets/pictures/Github.png";
 // import gmailIcon from "../assets/pictures/gmail.png";
@@ -16,11 +17,12 @@ import meDiplomaImg from "../assets/pictures/Diploma.webp";
 import SkillBar from './Others/SkillBar'; // adjust the path if needed
 import socialLinks from './Others/socialLink';
 
-
-
-
-
 const Home = () => {
+
+    const softSkills = [
+        "Problem-solving and debugging", "Strong work ethic and discipline", "Team collaboration and communication",
+        "Leadership and organization", "Adaptability", "Project Manager", "Time Management","Critical Thinking"
+    ]
 
     const images = [
         meCumLaudeImg,
@@ -35,18 +37,15 @@ const Home = () => {
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, [images.length]);
-
-
   return (
-    <div className='flex flex-col w-full hide-scrollbar'>
+    <div className='flex flex-col w-full'>
         {/* This is Navbar */}
-        <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center
-                   px-6 bg-white/80 backdrop-blur border-b border-gray-300">
+        <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center px-6 bg-white/80 backdrop-blur border-b border-gray-300">
             <div className="flex gap-5 items-center">
-                {["Home", "About", "Education", "Capstone Project", "Contact"].map((label) => (
+                {["Home", "About", "Skill", "Projects", "Contact"].map((label) => (
                     <span
                         key={label}
-                        className="relative group text-gray-500 hover:text-black"
+                        className="relative group text-gray-500 hover:text-black cursor-pointer"
                         href="#"
                     >
                         <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
@@ -75,7 +74,7 @@ const Home = () => {
         {/* This is Navbar */}
 
         {/* This is Body */}
-        <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-hide px-5">            
+        <div className="h-screen overflow-y-scroll snap-y snap-start px-5">            
             {/* Left Upper Body*/}
             <section 
                 id="sec1" 
@@ -88,7 +87,7 @@ const Home = () => {
                             I'm a Front-end | Fullstack Web Developer
                         </h1>
                         <p className='text-xl mt-20 text-gray-600'>
-                        Hi, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
+                            Hi, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
                         </p>
                     </div>
                     <div className="mt-20 w-full gap-x-15 flex align-center justify-center">
@@ -105,11 +104,6 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="flex-col ">
-                        <div className="flex justify-center mt-20">
-                            <h1 className='text-2xl text-gray-500 font-bold italic'>
-                                "Let's create something amazing together 👌"
-                            </h1>
-                        </div>
                         {/* links */}
                         <div className="flex  justify-center gap-5 mt-25">
                             {socialLinks.map((link) => (
@@ -138,13 +132,12 @@ const Home = () => {
                         src={meImg} 
                         alt='Image not found'
                     />
-
                 </div>
             </section>
 
             <section
                 id="sec2"
-                className="h-screen snap-start flex justify-center"
+                className="h-screen snap-start flex justify-center scroll-smooth"
             >
                 <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
                     <div className="flex flex-col p-2 mt-20">
@@ -160,38 +153,92 @@ const Home = () => {
                             Beyond code, I value clear communication, collaboration, and doing all things with intention — and yes, I firmly believe debugging is 70% detective work and 30% caffeine. ☕
                         </p>
                     </div>
-
                 </div>
-                    <div className="flex flex-col p-2 px-20 mt-45 border-gray-400 w-1/2 ">
-                        <img 
-                            className='w-[800px] h-[600px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100'
-                            src={images[currentIndex]} 
-                            alt='Image not found'
-                        />
-                    </div>
-                    
+                <div className="flex flex-col p-2 px-20 mt-45 border-gray-400 w-1/2 ">
+                    <img 
+                        className='w-[800px] h-[600px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100'
+                        src={images[currentIndex]} 
+                        alt='Image not found'
+                    />
+                </div>
             </section>
 
             <section
                 id='sec3'
                 className="h-screen snap-start flex justify-center"
             >
-            <div className="flex flex-col p-2 mt-20">
-                <h1 className='flex gap-1 text-5xl text-left font-bold text-black'>
-                    Skill Meter
-                </h1>
+                <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
+                    <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-black'>
+                        Skill Meter
+                    </h1>
+                   <div className="p-1 px-10">
+                        <SkillBar name="HTML" percent={40} color="bg-green-500" />
+                        <SkillBar name="CSS" percent={40} color="bg-blue-400" />
+                        <SkillBar name="ReactJS" percent={30} color="bg-red-500" />
+                        <SkillBar name="JavaScript" percent={30} color="bg-yellow-400" />
+                        <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
+                        <SkillBar name="Laravel(PHP & MySQL)" percent={40} color="bg-orange-400" />
+                        <SkillBar name="React Native" percent={25} color="bg-pink-400" />
+                        <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600"/>
+                    </div>
 
-                <SkillBar name="HTML" percent={40} color="bg-green-500" />
-                <SkillBar name="CSS" percent={40} color="bg-blue-400" />
-                <SkillBar name="ReactJS" percent={25} color="bg-red-500" />
-                <SkillBar name="JavaScript" percent={30} color="bg-yellow-400" />
-                <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
-                <SkillBar name="Laravel" percent={40} color="bg-orange-400" />
-                <SkillBar name="React Native" percent={25} color="bg-pink-400" />
-                <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600" />
-            </div>
+                </div>
+                <div className="w-1/2 ">
+                    <div className="flex flex-col p-2 mt-20 px-20">
+                        <div className=" mb-5 ">
+                            <h2 className='gap-1  text-5xl text-left font-bold text-black'>
+                                Designing Skills
+                            </h2>
+                            <p className="text-xl pl-5 mt-6 text-gray-600">
+                                ✅ UI/UX design with <a
+                                    href="https://www.figma.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold underline text-blue-600 hover:text-blue-800"
+                                >
+                                    Figma
+                                </a>
+                                <br /><br />
+                                ✅ Diagramming and flowchart creation with <a
+                                    href="https://www.drawio.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="font-bold underline text-blue-600 hover:text-blue-800"
+                                >
+                                    Draw.io
+                                </a>
+                            </p>
+
+                        </div>
+                        <h2 className='gap-1 text-5xl mt-15 text-left font-bold text-black'>
+                            Soft Skills
+                        </h2>
+                            {softSkills.map((skill, index)=> (
+                                <p 
+                                    key={index} 
+                                    className='text-xl mt-5 pl-5 flex text-gray-600'
+                                >
+                                    ✅ {skill}
+                                </p>
+                            ))}
+
+                    </div>
+                </div>
             </section>
         </div>
+        {/* This is Body */}
+
+        {/* This is Footer for resume*/}  
+        <a
+            href="./resume/Cabarrubias, Nevin Harold, D  - Resume.pdf"
+            download
+            className="fixed bottom-5 right-5 flex items-center gap-3 px-4 py-2 bg-black text-white rounded-full shadow-lg hover:bg-white hover:text-black hover:border transition duration-300 z-50"
+        >
+        <IoMdDownload 
+            className="w-5 h-5"
+        />
+            <span className="text-lg">Resume</span>
+        </a>
     </div>
   )
 }
