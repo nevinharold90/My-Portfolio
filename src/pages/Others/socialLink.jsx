@@ -9,34 +9,34 @@ const socialLinks = [
     icon: <FaGithub className="w-6 h-6" />,
     href: "https://github.com/nevinharold90",
     classname:
-      "bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 text-white",
+      "transition duration-500 bg-gradient-to-r from-violet-600 to-pink-600 hover:from-pink-400 hover:to-violet-600 text-white",
   },
   {
     name: "Gmail",
     icon: <SiGmail className="w-6 h-6 text-red-600 " />,
     href: "mailto:cabarrubias.nevinharold@gmail.com",
     classname:
-      "border border-gray-200 text-green-500 group hover:bg-gray-50 hover:text-green-400",
+      "transition duration-500 border border-gray-200 text-green-500 group hover:bg-gray-50 hover:text-green-400",
   },
   {
     name: "Facebook",
     icon: <FaFacebook className="w-6 h-6" />,
     href: "https://www.facebook.com/nevin.cabarrubias",
     classname:
-      "bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-600 hover:to-blue-400 text-white",
+      "transition duration-500 bg-gradient-to-r from-blue-700 to-blue-500 hover:from-blue-400 hover:to-blue-700 text-white",
   },
   {
     name: "Instagram",
     icon: <CiInstagram className="w-6 h-6" />,
     href: "https://www.instagram.com/nevin.cabarrubias/",
     classname:
-      "bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-pink-600 hover:to-yellow-600 text-white",
+      "transition duration-500 bg-gradient-to-r from-pink-500 to-yellow-500 hover:from-yellow-400 hover:to-pink-500 text-white",
   },
 ];
 
 export default socialLinks;
 
-//! Old code for in its readable state
+//! Old code | readable state
     {/* <a 
         className="flex gap-5 rounded-full hover:shadow-2xl border duration-300 cursor-pointer p-3 items-center bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-500 hover:to-pink-500 "
         href="https://github.com/nevinharold90"

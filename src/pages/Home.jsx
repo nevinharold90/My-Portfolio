@@ -62,17 +62,16 @@ const Home = () => {
                 ))}
             </div>
             {/* <div className="flex items-center"> */}
-            <a className="w-auto flex items-center mr-5 group cursor-pointer"
+            <a
                 href="mailto:cabarrubias.nevinharold@gmail.com"
+                className="flex items-center gap-2 group cursor-pointer mr-5"
             >
-                <CiMail 
-                    className="w-6 h-6 border-1 rounded duration-500 group-hover:bg-black group-hover:text-white" 
-                />
-                <h1 className="relative text-md duration-500 text-gray-400 p-2 rounded group-hover:text-black">
-                    <span className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                <CiMail className="w-6 h-6 duration-300 group-hover:bg-black group-hover:text-white rounded" />
+                <span className="text-md text-gray-400 duration-300 group-hover:text-black relative p-2">
+                    <span className="after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
                         cabarrubias.nevinharold@gmail.com
                     </span>
-                </h1>
+                </span>
             </a>
         </div>
         {/* This is Navbar */}
@@ -169,7 +168,7 @@ const Home = () => {
 
             <section
                 id='sec3'
-                className="h-screen snap-start flex justify-center"
+                className="h-screen snap-start flex justify-center border-b-1"
             >
                 <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
                     <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-black'>
@@ -190,9 +189,9 @@ const Home = () => {
                 <div className="w-1/2 ">
                     <div className="flex flex-col p-2 mt-20 px-20">
                         <div className=" mb-5 ">
-                            <h2 className='gap-1  text-5xl text-left font-bold text-black'>
+                            <h1 className='gap-1  text-5xl text-left font-bold text-black'>
                                 Designing Skills
-                            </h2>
+                            </h1>
                             <p className="text-xl pl-5 mt-6 text-gray-600">
                                 ✅ UI/UX design with <a
                                     href="https://www.figma.com"
@@ -229,6 +228,27 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <section
+                id='sec4'
+                className="h-screen snap-start flex justify-center"
+            >
+                <div className="flex flex-col p-2 px-20">
+                    <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-black'>
+                        Projects
+                    </h1>
+                    <div className="flex">
+                    {/* Left */}
+                        <div className="">
+
+                        </div>
+                    {/* Right */}
+                        <div className="">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
         {/* This is Body */}
 
@@ -236,7 +256,7 @@ const Home = () => {
         <a
             href="./resume/Cabarrubias, Nevin Harold, D  - Resume.pdf"
             download
-            className="fixed bottom-5 right-5 flex items-center gap-3 px-4 py-2 bg-black text-white rounded-full shadow-lg hover:bg-white hover:text-black transition duration-500 z-50" 
+            className="fixed animate-bounce bottom-5 right-5 flex items-center gap-3 px-4 py-2 bg-black text-white rounded-full shadow-lg hover:bg-white hover:text-black transition duration-500 z-50" 
         >
         <IoMdDownload 
             className="w-5 h-5"
