@@ -4,11 +4,13 @@ import './index.css'
 // import App from './App.jsx'
 
 import Home from './pages/Home'
-
+import LoadingEffect from './pages/Others/loadingEffect';
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home />
+    <LoadingEffect delay={2000}>
+      <Home />
+    </LoadingEffect>
   </StrictMode>,
 )

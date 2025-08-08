@@ -50,8 +50,7 @@ const Home = () => {
     }, [images.length]);
 
   return (
-    <LoadingEffect delay={1500}>
-        <div className='flex flex-col w-full'>
+        <div className='flex flex-col w-full bg-gray-50'>
             {/* This is Navbar */}
             <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center px-6 bg-white/90 backdrop-blur border-b border-gray-300">
                 <div className="flex gap-5 items-center">
@@ -90,15 +89,15 @@ const Home = () => {
                 {/* Left Upper Body*/}
                 <section 
                     id="sec1" 
-                    className="h-screen snap-start flex justify-center text-white"
+                    className="h-screen snap-start flex justify-center text-white "
                 >                
                     <div className="flex flex-col p-2 border-r-1 border-gray-400 w-1/2 ">
                         {/* Home */}
-                        <div className="flex flex-col">
-                            <h1 className='gap-1 text-5xl text-left mt-20 font-bold text-black'>
+                        <div className="flex flex-col fade-in ">
+                            <h1 className='fade-in delay-1 gap-1 text-5xl text-left mt-20 font-bold text-black'>
                                 I'm a Front-end | Fullstack Web Developer
                             </h1>
-                            <p className='text-xl mt-20 text-gray-600  '>
+                            <p className='fade-in delay-1 text-xl mt-20 text-gray-600  '>
                                 Welcome, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
                             </p>
                         </div>
@@ -107,7 +106,7 @@ const Home = () => {
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
                                 </h1>
                             </div>
-                            <h1 className='duration-500 hover:text-black hover:border hover:bg-white bg-black p-2 border-1 rounded-4xl text-3xl text-left font-bold cursor-default  '>
+                            <h1 className='fade-in delay-2 duration-500 hover:text-black hover:border hover:bg-white bg-black p-2 border-1 rounded-4xl text-3xl text-left font-bold cursor-default  '>
                                 Connect with me 
                             </h1>
                             <div className="justify-center flex items-center">
@@ -117,7 +116,7 @@ const Home = () => {
                         </div>
                         <div className="flex-col ">
                             {/* links */}
-                            <div className="flex justify-center gap-5 mt-40">
+                            <div className="fade-in delay-3 flex justify-center gap-5 mt-40">
                                 {socialLinks.map((link) => (
                                     <a 
                                         key={link.name}
@@ -140,7 +139,7 @@ const Home = () => {
                     <div className="w-1/2 flex flex-col items-center px-2 duration-200 justify-center">
                         {/* My Image */}
                         <img 
-                            className='w-[650px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100'
+                            className='fade-in delay-4 w-[650px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100'
                             src={meImg} 
                             alt='Image not found'
                         />
@@ -269,7 +268,7 @@ const Home = () => {
                                     <h1 className='text-2xl text-black text-left font-bold'>
                                         FMV (Fullstack with Mobile App)
                                     </h1>
-                                    <p className='mask-linear-from-inherit-to-inherit mt-5'>
+                                    <p className='mask-linear-from-inherit-to-inherit mt-'>
                                         A full-stack web application that manages inventory, deliveries, and walk-in sales using customer purchase orders and CRUD operations. Built with Laravel and integrated with a mobile app for real-time delivery management. 
                                     </p>
                                 </div>
@@ -277,11 +276,11 @@ const Home = () => {
                                     <h1>
                                         Frontend Source Code
                                     </h1>
-                                    {/* <img 
+                                    <img 
                                         className='w-20 h-20'
                                         src={fmvImage} 
                                         alt="" 
-                                    /> */}
+                                    />
                                 </div>
                             </div>
                             <div className="flex-col w-1/3">
@@ -303,7 +302,6 @@ const Home = () => {
                 <span className="text-lg">Resume.pdf</span>
             </a>
         </div>
-    </LoadingEffect>
   )
 }
 

@@ -15,7 +15,7 @@ const LoadingEffect = ({ children, delay = 2000 }) => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-black text-white z-50">
+      <div className="flex items-center justify-center h-screen bg-gray-100 text-white z-50">
         <div className="flex items-center text-6xl font-mono">
           {/* Left angle with animation */}
           <span className="text-cyan-400 animate-move-left">&lt;</span>
@@ -32,7 +32,7 @@ const LoadingEffect = ({ children, delay = 2000 }) => {
 
   return (
     <div
-      className={`transition-opacity duration-1000 ease-in-out ${
+      className={`transition-opacity duration-5000 ease-in-out ${
         fadeIn ? 'opacity-100' : 'opacity-0'
       }`}
     >
