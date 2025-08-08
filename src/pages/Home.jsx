@@ -32,29 +32,31 @@ const Home = () => {
         meCumLaudeImg,
         meDiplomaImg
     ]
+
     const [currentIndex, setCurrentIndex] = React.useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
         setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-        }, 3000); // Change every 2 seconds
+        }, 3000); // Change every 3 seconds
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, [images.length]);
+
   return (
     <div className='flex flex-col w-full'>
         {/* This is Navbar */}
-        <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center px-6 bg-white/80 backdrop-blur border-b border-gray-300">
+        <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center px-6 bg-white/90 backdrop-blur border-b border-gray-300">
             <div className="flex gap-5 items-center">
                 {navbarLinks.map((label) => (
                     <span
                         key={label}
-                        className="relative  group text-gray-500 hover:text-black cursor-pointer"
+                        className="relative group text-gray-500 hover:text-black cursor-pointer"
                         href="#"
                     >
-                        <span className="after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full
+                        <span className="after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-full
                                         after:bg-black after:scale-x-0 after:origin-left
-                                        after:transition-transform after:duration-300
+                                        after:transition-transform after:duration-400
                                         group-hover:after:scale-x-100">
                             {label}
                         </span>
@@ -68,7 +70,7 @@ const Home = () => {
             >
                 <CiMail className="w-6 h-6 duration-300 group-hover:bg-black group-hover:text-white rounded" />
                 <span className="text-md text-gray-400 duration-300 group-hover:text-black relative p-2">
-                    <span className="after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100">
+                    <span className="after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-black after:scale-x-0 after:origin-left after:transition-transform after:duration-300 group-hover:after:scale-x-100 ">
                         cabarrubias.nevinharold@gmail.com
                     </span>
                 </span>
@@ -77,7 +79,7 @@ const Home = () => {
         {/* This is Navbar */}
 
         {/* This is Body */}
-        <div className="h-screen overflow-y-scroll snap-y snap-start px-5">            
+        <div className="h-screen overflow-y-scroll snap-start snap-both px-5">            
             {/* Left Upper Body*/}
             <section 
                 id="sec1" 
@@ -89,16 +91,16 @@ const Home = () => {
                         <h1 className='gap-1 text-5xl text-left mt-20 font-bold text-black'>
                             I'm a Front-end | Fullstack Web Developer
                         </h1>
-                        <p className='text-xl mt-20 text-gray-600'>
+                        <p className='text-xl mt-20 text-gray-600  '>
                             Welcome, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
                         </p>
                     </div>
-                    <div className="mt-20 w-full gap-x-15 flex align-center justify-center">
+                    <div className="mt-30 w-full gap-x-15 flex align-center justify-center">
                         <div className="justify-center flex items-center">
                             <h1 className='h-[0.5px] w-[200px] bg-black'>
                             </h1>
                         </div>
-                        <h1 className='duration-500 hover:text-black hover:border hover:bg-white bg-black  p-2 border-1 rounded-4xl text-3xl text-left font-bold cursor-default'>
+                        <h1 className='duration-500 hover:text-black hover:border hover:bg-white bg-black p-2 border-1 rounded-4xl text-3xl text-left font-bold cursor-default  '>
                             Connect with me 
                         </h1>
                         <div className="justify-center flex items-center">
@@ -108,7 +110,7 @@ const Home = () => {
                     </div>
                     <div className="flex-col ">
                         {/* links */}
-                        <div className="flex  justify-center gap-5 mt-25">
+                        <div className="flex justify-center gap-5 mt-40">
                             {socialLinks.map((link) => (
                                 <a 
                                     key={link.name}
@@ -147,7 +149,7 @@ const Home = () => {
                         <h1 className='gap-1 text-5xl text-left font-bold text-black'>
                             About Me
                         </h1>
-                        <p className='text-xl mt-40 text-gray-600'>
+                        <p className='text-xl mt-40 text-gray-600 '>
                             Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating with Latin honors, and a fresh graduate. 
                             <br /><br />
                             I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native. </i>
@@ -157,18 +159,29 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col p-2 px-20 mt-45 border-gray-400 w-1/2 ">
+                <div className="flex flex-col p-2 px-20 border-gray-400 w-1/2 ">
                     <img 
-                        className='w-[800px] h-[600px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100'
+                        className='w-[800px] mt-30 h-[600px] rounded-xl border-gray-400 shadow-xl hover:scale-105 duration-100 transition'
                         src={images[currentIndex]} 
                         alt='Image not found'
                     />
+                        <div className="flex justify-center p-2 mt-10">
+                                {images.map((image) => (
+                                    <img 
+                                        className='w-40 h-30 ml-10 rounded-2xl duration-300 bg-blue-500 p-1 transition hover:opacity-80 hover:scale-105 shadow-xl'
+                                        src={image} 
+                                        alt="Graduation Images"
+                                        onClick={() => setCurrentIndex(images.indexOf(image))}
+                                    />
+                                    
+                                ))}
+                        </div>
                 </div>
             </section>
 
             <section
                 id='sec3'
-                className="h-screen snap-start flex justify-center border-b-1"
+                className="h-screen snap-start flex justify-center border-b-1 border-gray-400"
             >
                 <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
                     <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-black'>
@@ -180,11 +193,10 @@ const Home = () => {
                         <SkillBar name="ReactJS" percent={35} color="bg-red-500" />
                         <SkillBar name="JavaScript" percent={30} color="bg-yellow-400" />
                         <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
-                        <SkillBar name="Laravel(PHP & MySQL)" percent={40} color="bg-orange-400" />
+                        <SkillBar name="Laravel (PHP & MySQL)" percent={40} color="bg-orange-400" />
                         <SkillBar name="React Native" percent={25} color="bg-pink-400" />
                         <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600"/>
                     </div>
-
                 </div>
                 <div className="w-1/2 ">
                     <div className="flex flex-col p-2 mt-20 px-20">
@@ -231,21 +243,14 @@ const Home = () => {
 
             <section
                 id='sec4'
-                className="h-screen snap-start flex justify-center"
+                className="h-screen snap-start flex"
             >
-                <div className="flex flex-col p-2 px-20">
-                    <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-black'>
-                        Projects
+                <div className="flex flex-col p-2 px-20 w-full mt-20 items-center">
+                    <h1 className=' gap-1 text-5xl text-left font-bold text-black'>
+                        Proud Projects
                     </h1>
-                    <div className="flex">
-                    {/* Left */}
-                        <div className="">
-
-                        </div>
-                    {/* Right */}
-                        <div className="">
-                            
-                        </div>
+                    <div className="">
+                        
                     </div>
                 </div>
             </section>
