@@ -155,7 +155,7 @@ const Home = () => {
                             <h1 className='gap-1 text-5xl text-left font-bold text-black'>
                                 About Me
                             </h1>
-                            <p className='text-xl mt-40 text-gray-600 '>
+                            <p className='text-xl mt-35 text-gray-600 '>
                                 Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating with Latin honors, and a fresh graduate. 
                                 <br /><br />
                                 I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native. </i>
@@ -256,7 +256,7 @@ const Home = () => {
                             <div className="flex mt-5 flex-col w-1/3 ">
                                 <div className="border-1 border-gray-400 rounded p-3">
                                     <h1 className='text-2xl text-black text-left'>
-                                        My Portfolio
+                                        My Portfolio (wip)
                                     </h1>
                                     <p>
                                         This portfolio website showcases my skills and projects, built with React and Tailwind CSS. It features a responsive design, smooth animations, and a user-friendly interface.
