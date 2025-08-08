@@ -25,3 +25,29 @@ body {
   -ms-overflow-style: none;  /* IE 10+ */
   scrollbar-width: none;     /* Firefox */
 }
+
+@keyframes moveLeft {
+  0%, 100% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes moveRight {
+  0%, 100% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+}
+
+.animate-move-left {
+  animation: moveLeft 1.5s ease-in-out infinite;
+}
+
+.animate-move-right {
+  animation: moveRight 1.5s ease-in-out infinite;
+}
