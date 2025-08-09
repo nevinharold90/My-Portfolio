@@ -17,14 +17,14 @@ const SkillBar = ({ name, percent, color }) => {
   }, []);
 
   return (
-    <div ref={barRef} className="mt-10 ">
+    <div ref={barRef} className="mt-3">
       <div className="flex justify-between">
-        <span className="text-xl font-medium text-gray-700">{name}</span>
-        <span className="text-xl text-gray-500">{percent}%</span>
+        <span className="text-sm font-medium text-gray-500">{name}</span>
+        <span className="text-sm text-gray-500">{percent}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-6 overflow-hidden hover:scale-105 duration-300">
+      <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden hover:scale-105 duration-300">
         <div
-          className={`h-6 rounded-full transition-all duration-[1200ms] ease-in-out ${color}`}
+          className={`h-3 rounded-full transition-all duration-[1200ms] ease-in-out ${color}`}
           style={{ width: inView ? `${percent}%` : '0%' }}
         ></div>
       </div>

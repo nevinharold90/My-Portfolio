@@ -94,10 +94,10 @@ const Home = () => {
                     <div className="flex flex-col p-2 border-r-1 border-gray-400 w-1/2 ">
                         {/* Home */}
                         <div className="flex flex-col fade-in ">
-                            <h1 className='fade-in delay-1 gap-1 text-5xl text-left mt-20 font-bold text-black'>
-                                I'm a Front-end | Fullstack Web Developer
+                            <h1 className='fade-in delay-1 gap-1 text-5xl text-left mt-20 font-bold text-gray-900'>
+                                FRONT-END | FULL STACK WEB DEVELOPER
                             </h1>
-                            <p className='fade-in delay-1 text-xl mt-20 text-gray-600  '>
+                            <p className='fade-in delay-1 text-xl mt-20 text-gray-700  '>
                                 Welcome, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
                             </p>
                         </div>
@@ -106,8 +106,8 @@ const Home = () => {
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
                                 </h1>
                             </div>
-                            <h1 className='fade-in delay-2 duration-500 hover:text-black hover:border hover:bg-white bg-black p-2 border-1 rounded-4xl text-3xl text-left font-bold cursor-default  '>
-                                Connect with me 
+                            <h1 className='fade-in delay-2 duration-500 p-2 text-3xl  text-gray-900 font-bold cursor-default  '>
+                                CONNECT WITH ME 
                             </h1>
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
@@ -152,16 +152,16 @@ const Home = () => {
                 >
                     <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
                         <div className="flex flex-col p-2 mt-20">
-                            <h1 className='gap-1 text-5xl text-left font-bold text-black'>
+                            <h1 className='gap-1 text-5xl text-left font-bold text-gray-900'>
                                 About Me
                             </h1>
-                            <p className='text-xl mt-35 text-gray-600 '>
+                            <p className='text-xl mt-35 text-gray-800 '>
                                 Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating with Latin honors, and a fresh graduate. 
                                 <br /><br />
-                                I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves <i>React, Laravel, and the occasional sprint through mobile development with React Native. </i>
-                                I also have experience integrating RESTful APIs into both web and mobile apps, handling everything from data fetching to error handling and UI updates using platform like <i>Insomnia and Postman</i>.
+                                I’m deeply interested in building fast, user-focused web apps with meaningful design and solid architecture. My workflow often involves React, Laravel, and the occasional sprint through mobile development with React Native.
+                                I also have experience integrating RESTful APIs into both web and mobile apps, handling everything from data fetching to error handling and UI updates using platform like Insomnia and Postman.
                                 <br /><br />
-                                Beyond code, I value clear communication, collaboration, and doing all things with intention — and yes, I firmly believe debugging is 70% detective work and 30% caffeine. ☕
+                                Beyond code, I am a christian serving Jesus Christ as part of a choir member here at my local church in the Philippines, I was saved and will forever honor Jesus. <i>"A shepherd will never abandon a lost lamb."</i>
                             </p>
                         </div>
                     </div>
@@ -189,18 +189,38 @@ const Home = () => {
                     className="h-screen snap-start flex justify-center border-b-1 border-gray-400"
                 >
                     <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
-                        <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-black'>
+                        <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-gray-800'>
                             Skill Meter
                         </h1>
-                    <div className="p-1 px-10">
-                            <SkillBar name="HTML" percent={55} color="bg-green-500" />
-                            <SkillBar name="CSS" percent={55} color="bg-blue-400" />
-                            <SkillBar name="ReactJS" percent={45} color="bg-red-500" />
-                            <SkillBar name="JavaScript" percent={30} color="bg-yellow-400" />
-                            <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
-                            <SkillBar name="Laravel (PHP & MySQL)" percent={40} color="bg-orange-400" />
-                            <SkillBar name="React Native" percent={25} color="bg-pink-400" />
-                            <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600"/>
+                    <div className="px-10">
+                            <div className="flex flex-col">
+                                <h1 className='text-gray-700 mt-10'>
+                                    FRONT END
+                                </h1>
+                                    <SkillBar name="HTML" percent={55} color="bg-green-400" />
+                                    <SkillBar name="ReactJS" percent={45} color="bg-red-400" />
+                                    <SkillBar name="JavaScript" percent={30} color="bg-yellow-300" />
+
+                                <h1 className='text-gray-700 mt-10'>
+                                    DESIGN
+                                </h1>
+                                    <SkillBar name="CSS" percent={55} color="bg-blue-400" />
+                                    <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
+                                    <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600"/>
+                            </div>
+                            <div className="flex flex-col mt-5">
+                                <h1 className='text-gray-700 mt-10'>
+                                    BACK END
+                                </h1>
+                                <SkillBar name="Laravel (PHP & MySQL)" percent={40} color="bg-orange-400" />
+                            </div>
+
+                            <div className="flex flex-col mt-5">
+                                <h1 className='text-gray-700 mt-10'>
+                                    MOBILE 
+                                </h1>
+                                <SkillBar name="React Native (EXPO)" percent={25} color="bg-pink-400" />
+                            </div>
                         </div>
                     </div>
                     <div className="w-1/2 ">
@@ -210,7 +230,7 @@ const Home = () => {
                                     Designing Skills
                                 </h1>
                                 <p className="text-xl pl-5 mt-6 text-gray-600">
-                                    ✅ UI/UX design with <a
+                                        UI/UX design with <a
                                         href="https://www.figma.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -219,7 +239,7 @@ const Home = () => {
                                         Figma
                                     </a>
                                     <br /><br />
-                                    ✅ Diagramming and flowchart creation with <a
+                                    Diagramming and flowchart creation with <a
                                         href="https://www.drawio.com/"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -237,7 +257,7 @@ const Home = () => {
                                         key={index} 
                                         className='text-xl mt-5 pl-5 flex text-gray-600'
                                     >
-                                        ✅ {skill}
+                                        {skill}
                                     </p>
                                 ))}
                         </div>
