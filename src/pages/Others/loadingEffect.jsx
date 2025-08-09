@@ -15,16 +15,23 @@ const LoadingEffect = ({ children, delay = 2000 }) => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gray-100 text-white z-50">
+      <div className="flex items-center justify-center h-screen bg-white text-white z-50">
         <div className="flex items-center text-6xl font-mono">
           {/* Left angle with animation */}
-          <span className="text-cyan-400 animate-move-left">&lt;</span>
+          <span className="text-yellow-500 drop-shadow-2xl animate-move-left">&lt;</span>
 
-          {/* Spinning circle */}
-          <div className="mx-4 animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-cyan-400 shadow-[0_0_20px_4px_rgba(0,255,255,0.5)]"></div>
-
+        <div className="flex flex-col relative justify-center items-center rounded-full h-10 w-10 drop-shadow-2xl border-1 border-amber-500  bg-yellow-500">
+          {/* Crown - positioned above */}
+          <h1 className="absolute -top-10 opacity-90 fade-in delay-4 text-5xl font-bold text-yellow-500 drop-shadow-lg shadow-lime-600">
+            ♕
+          </h1>
+          {/* Cross - centered */}
+          <h1 className="text-4xl font-bold animate-pulse text-white fade-in delay-1 drop-shadow-lg">
+            ✝
+          </h1>
+        </div>
           {/* Right angle with animation */}
-          <span className="text-cyan-400 animate-move-right">&gt;</span>
+          <span className="text-yellow-500 drop-shadow-2xl animate-move-right">&gt;</span>
         </div>
       </div>
     );

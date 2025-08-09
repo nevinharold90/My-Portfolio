@@ -9,7 +9,7 @@ import LoadingEffect from './pages/Others/loadingEffect';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <LoadingEffect delay={2000}>
+    <LoadingEffect delay={4000}>
       <Home />
     </LoadingEffect>
   </StrictMode>,

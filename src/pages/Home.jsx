@@ -104,7 +104,7 @@ const Home = () => {
                         <div className="mt-30 w-full gap-x-15 flex align-center justify-center">
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
-                                    ✝
+                                    
                                 </h1>
                             </div>
                             <h1 className='fade-in delay-2 duration-500 p-2 text-3xl  text-gray-900 font-bold cursor-default  '>
@@ -112,7 +112,7 @@ const Home = () => {
                             </h1>
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
-                                    ✝
+                                    
                                 </h1>
                             </div>
                         </div>
@@ -236,7 +236,7 @@ const Home = () => {
                                         href="https://www.figma.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="font-bold underline text-blue-600 hover:text-blue-800"
+                                        className="font-bold text-yellow-500 hover:text-yellow-700 duration-300"
                                     >
                                         Figma
                                     </a>
@@ -245,7 +245,7 @@ const Home = () => {
                                         href="https://www.drawio.com/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="font-bold underline text-blue-600 hover:text-blue-800"
+                                        className="font-bold text-yellow-500 hover:text-yellow-700 duration-300"
                                     >
                                         Draw.io
                                     </a>
