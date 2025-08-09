@@ -23,7 +23,7 @@ import LoadingEffect from './Others/loadingEffect';
 const Home = () => {
 
     const navbarLinks = [
-        "Home", "About", "Skill", "Projects", "Contact"
+        "HOME", "ABOUT", "SKILL", "PROJECTS", "CONTACT"
     ]
 
     const softSkills = [
@@ -57,7 +57,7 @@ const Home = () => {
                     {navbarLinks.map((label) => (
                         <span
                             key={label}
-                            className="relative group text-gray-500 hover:text-black cursor-pointer"
+                            className="relative group text-gray-600 hover:text-black cursor-pointer"
                             href="#"
                         >
                             <span className="after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-full
@@ -104,13 +104,15 @@ const Home = () => {
                         <div className="mt-30 w-full gap-x-15 flex align-center justify-center">
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
+                                    ✝
                                 </h1>
                             </div>
                             <h1 className='fade-in delay-2 duration-500 p-2 text-3xl  text-gray-900 font-bold cursor-default  '>
-                                CONNECT WITH ME 
+                               ✝ CONNECT WITH ME ✝
                             </h1>
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
+                                    ✝
                                 </h1>
                             </div>
                         </div>
@@ -153,7 +155,7 @@ const Home = () => {
                     <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
                         <div className="flex flex-col p-2 mt-20">
                             <h1 className='gap-1 text-5xl text-left font-bold text-gray-900'>
-                                About Me
+                                ABOUT ME
                             </h1>
                             <p className='text-xl mt-35 text-gray-800 '>
                                 Hey! I’m Nevin — a passionate developer with a degree in Information Technology from the University of Science and Technology of Southern Philippines, graduating with Latin honors, and a fresh graduate. 
@@ -190,7 +192,7 @@ const Home = () => {
                 >
                     <div className="flex flex-col border-r-1 border-gray-400 w-1/2">
                         <h1 className=' gap-1 text-5xl text-left font-bold mt-20 text-gray-800'>
-                            Skill Meter
+                            SKILL METER
                         </h1>
                     <div className="px-10">
                             <div className="flex flex-col">
@@ -226,8 +228,8 @@ const Home = () => {
                     <div className="w-1/2 ">
                         <div className="flex flex-col p-2 mt-20 px-20">
                             <div className=" mb-5 ">
-                                <h1 className='gap-1  text-5xl text-left font-bold text-black'>
-                                    Designing Skills
+                                <h1 className=' gap-1 text-5xl text-left font-bold text-gray-800'>
+                                    DESIGNING SKILLS
                                 </h1>
                                 <p className="text-xl pl-5 mt-6 text-gray-600">
                                         UI/UX design with <a
@@ -249,9 +251,9 @@ const Home = () => {
                                     </a>
                                 </p>
                             </div>
-                            <h2 className='gap-1 text-5xl mt-15 text-left font-bold text-black'>
-                                Soft Skills
-                            </h2>
+                            <h1 className=' gap-1 text-5xl text-left font-bold mt-15 text-gray-800'>
+                                SOFT SKILLS
+                            </h1>
                                 {softSkills.map((skill, index)=> (
                                     <p 
                                         key={index} 
