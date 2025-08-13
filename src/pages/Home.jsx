@@ -47,6 +47,13 @@ const Home = () => {
     linkLabel: "View Repo",
     linkHref: "#",
   },
+  {
+    title: "Another Project 4",
+    description: "Description for the second project…",
+    // image: someOtherImage,
+    linkLabel: "View Repo",
+    linkHref: "#",
+  },
 ];
 
 
@@ -310,8 +317,8 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-                <section id="sec4" className="h-screen snap-start flex items-center justify-center">
-                    <div className="flex flex-col w-full  items-center px-4">
+                <section id="sec4" className="h-screen snap-start flex ">
+                    <div className="flex flex-col w-full  items-center px-4 mt-20">
                         <h1 className="text-5xl font-bold text-black">Projects</h1>
                         <Carousel projects={projects} />
                     </div>
