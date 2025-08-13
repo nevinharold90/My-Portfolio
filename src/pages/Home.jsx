@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { use, useEffect } from 'react'
 import { CiMail } from "react-icons/ci";
 
 // image below
@@ -19,8 +19,36 @@ import loadingEffect from './Others/loadingEffect';
 import SkillBar from './Others/SkillBar'; // adjust the path if needed
 import socialLinks from './Others/socialLink';
 import LoadingEffect from './Others/loadingEffect';
+import Carousel from './Others/Carousel';
+
 
 const Home = () => {
+
+    const projects = [
+  {
+    title: "FMV (Fullstack with Mobile App)",
+    description:
+      "A full-stack web application that manages inventory, deliveries, and walk-in sales using customer purchase orders and CRUD operations. Built with Laravel and integrated with a mobile app for real-time delivery management.",
+    // image: fmvImage,
+    linkLabel: "Frontend Source Code",
+    linkHref: "#",
+  },
+  {
+    title: "Another Project1",
+    description: "Description for the second project…",
+    // image: someOtherImage,
+    linkLabel: "View Repo",
+    linkHref: "#",
+  },
+  {
+    title: "Another Project 2",
+    description: "Description for the second project…",
+    // image: someOtherImage,
+    linkLabel: "View Repo",
+    linkHref: "#",
+  },
+];
+
 
     const navbarLinks = [
         "HOME", "ABOUT", "SKILL", "PROJECTS", "CONTACT"
@@ -41,6 +69,20 @@ const Home = () => {
 
     const [currentIndex, setCurrentIndex] = React.useState(0);
 
+    const handleNavBarClick = (label) => {
+        console.log(label);
+        if (label === "HOME") {
+            document.getElementById("sec1").scrollIntoView({ behavior: "smooth" });
+        }
+        else if (label === "ABOUT") {
+            document.getElementById("sec2").scrollIntoView({ behavior: "smooth" });
+        } else if (label === "SKILL") {
+            document.getElementById("sec3").scrollIntoView({ behavior: "smooth" });
+        } else if (label === "PROJECTS") {
+            document.getElementById("sec4").scrollIntoView({ behavior: "smooth" });
+        } 
+    }
+
     useEffect(() => {
         const interval = setInterval(() => {
         setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
@@ -53,22 +95,25 @@ const Home = () => {
         <div className='flex flex-col w-full bg-gray-50'>
             {/* This is Navbar */}
             <div className="fixed top-0 left-0 w-full h-16 z-50 flex justify-between items-center px-6 bg-white/90 backdrop-blur border-b border-gray-300">
-                <div className="flex gap-5 items-center">
+                <nav className="flex gap-5 items-center">
                     {navbarLinks.map((label) => (
                         <span
                             key={label}
                             className="relative group text-gray-600 hover:text-black cursor-pointer"
                             href="#"
+                            onClick={() => handleNavBarClick(label)}
                         >
-                            <span className="after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-full
-                                            after:bg-black after:scale-x-0 after:origin-left
-                                            after:transition-transform after:duration-400
-                                            group-hover:after:scale-x-100">
+                            <span
+                                className="after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-full
+                                        after:bg-black after:scale-x-0 after:origin-left
+                                        after:transition-transform after:duration-400
+                                        group-hover:after:scale-x-100"
+                            >
                                 {label}
                             </span>
                         </span>
                     ))}
-                </div>
+                </nav>
                 {/* <div className="flex items-center"> */}
                 <a
                     href="mailto:cabarrubias.nevinharold@gmail.com"
@@ -265,49 +310,10 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-
-                <section
-                    id='sec4'
-                    className="h-screen snap-start flex"
-                >
-                    <div className="flex flex-col p-2 px-20 w-full mt-20 items-center">
-                        <h1 className=' gap-1 text-5xl text-left font-bold text-black'>
-                            Proud Projects
-                        </h1>
-                        <div className="flex w-full gap-1">
-                            <div className="flex mt-5 flex-col w-1/3 ">
-                                <div className="border-1 border-gray-400 rounded p-3">
-                                    <h1 className='text-2xl text-black text-left'>
-                                        My Portfolio (wip)
-                                    </h1>
-                                    <p>
-                                        This portfolio website showcases my skills and projects, built with React and Tailwind CSS. It features a responsive design, smooth animations, and a user-friendly interface.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex mt-5 flex-col w-1/3  ">
-                                <div className="flex flex-col rounded-4xl p-3">
-                                    <h1 className='text-2xl text-black text-left font-bold'>
-                                        FMV (Fullstack with Mobile App)
-                                    </h1>
-                                    <p className='mask-linear-from-inherit-to-inherit mt-'>
-                                        A full-stack web application that manages inventory, deliveries, and walk-in sales using customer purchase orders and CRUD operations. Built with Laravel and integrated with a mobile app for real-time delivery management. 
-                                    </p>
-                                </div>
-                                <div className="mt-3 p-3">
-                                    <h1>
-                                        Frontend Source Code
-                                    </h1>
-                                    <img 
-                                        className='w-20 h-20'
-                                        src={fmvImage} 
-                                        alt="" 
-                                    />
-                                </div>
-                            </div>
-                            <div className="flex-col w-1/3">
-                            </div>
-                        </div>
+                <section id="sec4" className="h-screen snap-start flex items-center justify-center">
+                    <div className="flex flex-col w-full  items-center px-4">
+                        <h1 className="text-5xl font-bold text-black">Projects</h1>
+                        <Carousel projects={projects} />
                     </div>
                 </section>
             </div>
