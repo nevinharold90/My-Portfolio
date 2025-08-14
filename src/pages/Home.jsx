@@ -93,6 +93,12 @@ const Home = () => {
                             </span>
                         </span>
                     ))}
+                     <p className=" hover:text-red-500 after:absolute after:left-0 after:-bottom-1 after:h-[1px] after:w-full
+                                        after:bg-black after:scale-x-0 after:origin-left
+                                        after:transition-transform after:duration-400
+                                        group-hover:after:scale-x-100">
+                        Website Under Development
+                    </p>
                 </nav>
                 {/* <div className="flex items-center"> */}
                 <a

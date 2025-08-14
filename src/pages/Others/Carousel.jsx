@@ -33,7 +33,7 @@ export default function Carousel({ projects = [] }) {
         aria-hidden={ariaHidden}
         tabIndex={ariaHidden ? -1 : 0}
         className={[
-          "hover:scale-105 transition duration-300 h-full w-72 sm:w-80 md:w-130 text-left bg-white rounded-3xl p-5 shadow-lg border border-black/5",
+          "hover:bg-gray-100 hover:shadow-2xl cursor-pointer transition duration-500 h-full w-72 sm:w-80 md:w-130 text-left bg-white rounded-3xl p-5 shadow-lg border border-black/5",
           "flex flex-col overflow-hidden",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black",
           emphasis === "center"
