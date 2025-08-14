@@ -30,11 +30,11 @@ const Home = () => {
     description:
       "A full-stack web application that manages inventory, deliveries, and walk-in sales using customer purchase orders and CRUD operations. Built with Laravel and integrated with a mobile app for real-time delivery management.",
     // image: fmvImage,
-    linkLabel: "Frontend Source Code",
+    linkLabel: ["Frontend Source Code",],
     linkHref: "#",
   },
   {
-    title: "Another Project1",
+    title: "Rentago",
     description: "Description for the second project…",
     // image: someOtherImage,
     linkLabel: "View Repo",
@@ -319,7 +319,7 @@ const Home = () => {
                 </section>
                 <section id="sec4" className="h-screen snap-start flex ">
                     <div className="flex flex-col w-full  items-center px-4 mt-20">
-                        <h1 className="text-5xl font-bold text-black">Projects</h1>
+                        <h1 className="text-5xl font-bold text-black">Projects (WIP)</h1>
                         <Carousel projects={projects} />
                     </div>
                 </section>
