@@ -20,49 +20,14 @@ import SkillBar from './Others/SkillBar'; // adjust the path if needed
 import socialLinks from './Others/socialLink';
 import LoadingEffect from './Others/loadingEffect';
 import Carousel from './Others/Carousel';
+import projects from './Projects/Details'; // adjust the path if needed
+
 
 
 const Home = () => {
 
-    const projects = [
-        {
-            title: "FMV (Fullstack with Mobile App)",
-            slug: "fmv",
-            description:
-            "A full-stack web application that manages inventory, deliveries, and walk-in sales using customer purchase orders and CRUD operations. Built with ReactJS, Laravel, and integrated with a mobile app for real-time delivery management.",
-            links: [
-                { label: "Frontend Source Code", target: "_blank", href: "https://github.com/nevinharold90/FMV-WEB" },
-                { label: "Backend Source Code", target: "_blank", href: "https://github.com/nevinharold90/FMV-Backend-Project" },
-                { label: "Mobile App Source Code", target: "_blank", href: "https://github.com/nevinharold90/FMV-MOBILE" },
-            ]
-        },
-        {
-            title: "Rentago",
-            slug: "rentago",
-            description: "A full-stack web application for managing rental properties, including tenant management, payment tracking, and maintenance requests. Built with Laravel,  ReactNative and  NativeWindCSS (Mobile version of TailwindCSS).",
-            links: [
-                { label: "Frontend Source Code", target: "_blank", href: "https://github.com/nevinharold90/RentagoProject" }
-            ]
-        },
-        {
-            title: "Portfolio Website",
-            slug: "portfolio",
-            description: "Project Created with ReactJS, TailwindCSS, and Vite. This portfolio showcases my skills, projects, and experience as a web developer.",
-            // image: someOtherImage,
-            links: [
-                { label: "Website (Live | Vercel)", target: "_blank", href: "https://titoy.vercel.app/" },
-                { label: "Source Code", target: "_blank", href: "https://github.com/nevinharold90/My-Portfolio" },
-            ]
-        },
-        // {
-        //     title: "Another Project 4",
-        //     description: "Description for the second project…",
-        //     // image: someOtherImage,
-        //     linkLabel: "View Repo",
-        //     linkHref: "#",
-        // },
-    ];
-
+    const ProjectData = projects
+    // console.log(ProjectData);
 
     const navbarLinks = [
         "HOME", "ABOUT", "SKILL", "PROJECTS", "CONTACT"
@@ -98,6 +63,7 @@ const Home = () => {
     }
 
     useEffect(() => {
+        
         const interval = setInterval(() => {
         setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
         }, 3000); // Change every 3 seconds
@@ -261,13 +227,11 @@ const Home = () => {
                                     <SkillBar name="HTML" percent={55} color="bg-green-400" />
                                     <SkillBar name="ReactJS" percent={45} color="bg-red-400" />
                                     <SkillBar name="JavaScript" percent={30} color="bg-yellow-300" />
-
+                            <div className="flex flex-col mt-5">
                                 <h1 className='text-gray-700 mt-10'>
-                                    DESIGN
+                                    MOBILE 
                                 </h1>
-                                    <SkillBar name="CSS" percent={55} color="bg-blue-400" />
-                                    <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
-                                    <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600"/>
+                                <SkillBar name="React Native (EXPO)" percent={25} color="bg-pink-400" />
                             </div>
                             <div className="flex flex-col mt-5">
                                 <h1 className='text-gray-700 mt-10'>
@@ -275,13 +239,14 @@ const Home = () => {
                                 </h1>
                                 <SkillBar name="Laravel (PHP & MySQL)" percent={40} color="bg-orange-400" />
                             </div>
-
-                            <div className="flex flex-col mt-5">
                                 <h1 className='text-gray-700 mt-10'>
-                                    MOBILE 
+                                    DESIGN
                                 </h1>
-                                <SkillBar name="React Native (EXPO)" percent={25} color="bg-pink-400" />
+                                <SkillBar name="CSS" percent={55} color="bg-blue-400" />
+                                <SkillBar name="Tailwind" percent={40} color="bg-violet-600" />
+                                <SkillBar name="Native Wind (Mobile Tailwind CSS)" percent={25} color="bg-gray-600"/>
                             </div>
+
                         </div>
                     </div>
                     <div className="w-1/2 ">
@@ -327,7 +292,7 @@ const Home = () => {
                 <section id="sec4" className="h-screen snap-start flex ">
                     <div className="flex flex-col w-full  items-center px-4 mt-20">
                         <h1 className="text-5xl font-bold text-black">Projects (WIP)</h1>
-                        <Carousel projects={projects} />
+                        <Carousel projects={ProjectData} />
                     </div>
                 </section>
             </div>
