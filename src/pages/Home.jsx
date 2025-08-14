@@ -41,7 +41,7 @@ const Home = () => {
             slug: "rentago",
             description: "A full-stack web application for managing rental properties, including tenant management, payment tracking, and maintenance requests. Built with Laravel,  ReactNative and  NativeWindCSS (Mobile version of TailwindCSS).",
             links: [
-                { label: "FRONTEND SOURCE CODE", target: "_blank", href: "https://github.com/nevinharold90/RentagoProject" }
+                { label: "Frontend Source Code", target: "_blank", href: "https://github.com/nevinharold90/RentagoProject" }
             ]
         },
         {
@@ -50,7 +50,7 @@ const Home = () => {
             description: "Project Created with ReactJS, TailwindCSS, and Vite. This portfolio showcases my skills, projects, and experience as a web developer.",
             // image: someOtherImage,
             links: [
-                { label: "Website (live with Vercel)", target: "_blank", href: "https://titoy.vercel.app/" },
+                { label: "Website (Live | Vercel)", target: "_blank", href: "https://titoy.vercel.app/" },
                 { label: "Source Code", target: "_blank", href: "https://github.com/nevinharold90/My-Portfolio" },
             ]
         },
