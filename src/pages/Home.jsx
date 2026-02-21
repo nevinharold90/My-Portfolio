@@ -139,7 +139,7 @@ const Home = () => {
                                 </h1>
                             </div>
                             <h1 className='fade-in delay-2 duration-500 p-2 text-3xl  text-gray-900 font-bold cursor-default  '>
-                               Connect Meddy
+                               CONNECT WITH ME
                             </h1>
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
