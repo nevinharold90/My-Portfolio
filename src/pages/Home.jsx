@@ -126,7 +126,7 @@ const Home = () => {
                         {/* Home */}
                         <div className="flex flex-col fade-in ">
                             <h1 className='fade-in delay-1 gap-1 text-5xl text-left mt-20 font-bold text-gray-900'>
-                                FRONT-END | FULL STACK WEB DEVELOPER Daffodil bahog lubot
+                                FRONT-END | FULL STACK WEB DEVELOPER
                             </h1>
                             <p className='fade-in delay-1 text-xl mt-20 text-gray-700  '>
                                 Welcome, I’m Nevin Harold D. Cabarrubias — a full-stack web developer who enjoys building clean, responsive websites and mobile apps. I've worked with technologies like React, Laravel, and React Native, and I love turning complex problems into intuitive solutions.
@@ -139,7 +139,7 @@ const Home = () => {
                                 </h1>
                             </div>
                             <h1 className='fade-in delay-2 duration-500 p-2 text-3xl  text-gray-900 font-bold cursor-default  '>
-                               CONNECT WITH ME
+                               Connect Meddy with me sir
                             </h1>
                             <div className="justify-center flex items-center">
                                 <h1 className='h-[0.5px] w-[200px] bg-black'>
